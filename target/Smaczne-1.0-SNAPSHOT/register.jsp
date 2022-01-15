@@ -1,43 +1,31 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: macie
-  Date: 30.11.2021
-  Time: 18:57
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="user">
     <header class="user__header">
         <link rel="stylesheet" href="style/register.css">
-
         <h1 class="user__title">Rejestracja</h1>
     </header>
-
-    <form class="form">
+    <form method="post"  action="/hello-servlet">
         <div class="form__group">
-            <input type="text" placeholder="Nazwa Użytkownika" class="form__input" />
+            <input type="text" name="name" placeholder="Nazwa Użytkownika" class="form__input" />
         </div>
 
         <div class="form__group">
-            <input type="email" placeholder="Email" class="form__input" />
+            <input type="email" name="email" placeholder="Email" class="form__input" />
         </div>
 
         <div class="form__group">
-            <input type="password" placeholder="Hasło" class="form__input" />
+            <input type="password" name="pass" placeholder="Hasło" class="form__input" />
         </div>
+
         <div class="form__group">
             <input type="text" placeholder="Numer Telefonu" class="form__input" />
         </div>
         <div class="form__group">
             <input type="text" placeholder="Adres" class="form__input" />
         </div>
-
-        <div>
-        <button class="btn" type="button">Rejestracja</button>
-        </div>
-
+        <button type="submit">Zarejestruj</button>
     </form>
-   <form action="main.jsp">
-    <button type="submit">Strona Główna</button>
+    <form action="login.jsp">
+        <button type="submit">Logowanie</button>
     </form>
 </div>

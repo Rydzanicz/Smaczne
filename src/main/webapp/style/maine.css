@@ -1,0 +1,73 @@
+.stopka, .cialo, .naglowek {
+    /*margin: 0.5px;*/
+    padding: 0.5%;
+}
+.naglowek{
+    min-height: 20%;
+    min-width: 99%;
+    max-width: 99%;
+    clear: both;
+    -webkit-text-stroke: 1px white;
+    font-size: 25px;
+    font-style: italic;
+}
+.cialo{
+    min-height: 75%;
+    min-width: 98%;
+    max-width: 98%;
+    clear: both;
+}
+.stopka {
+    position: absolute;
+    bottom: 0;
+    min-width: 98%;
+    max-width: 98%;
+    min-height: 2%;
+    text-align: right;
+    clear: both;
+}
+/*.nazwa{
+    text-align: center;
+}*/
+html {
+    background-image: url("image/tlo.jpg");
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+.restaurant_names {
+    float: left;
+}
+h1 {
+    text-align: center;
+}
+div#restauracjapolska, div#restauracjaturecka, div#restauracjawloska, div#restauracjachinska{
+    background-color: #dac1c1;
+    border-style: solid;
+    border-color: black;
+    margin: 7px;
+    padding: 50px;
+    text-align: center;
+    min-height: 30%;
+    max-height: 50%;
+    max-width: 50%;
+    min-width: 60%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 275px;
+}
+div#restauracjapolska {
+    background-image: url("image/kuchniapolska.jpg");
+}
+div#restauracjachinska{
+    background-image: url("image/kuchniachinska.jpg");
+}
+div#restauracjaturecka{
+    background-image: url("image/kuchniaturecka.jpg");
+}
+div#restauracjawloska{
+    background-image: url("image/kuchniawłoska.jpg");
+}
