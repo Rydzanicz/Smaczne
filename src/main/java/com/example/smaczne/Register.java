@@ -2,10 +2,12 @@ package com.example.smaczne;
 
 import java.io.*;
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.sql.*;
+import  javax.servlet.http.HttpServlet;
 
-//@WebServlet(name = "register", value = "register")
+@WebServlet(name = "register", value = "register")
 public class Register extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

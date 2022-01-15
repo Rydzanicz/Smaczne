@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="style/register.css">
         <h1 class="user__title">Rejestracja</h1>
     </header>
-    <form method="post"  action="/hello-servlet">
+    <form method="post"  action="register">
         <div class="form__group">
             <input type="text" name="name" placeholder="Nazwa Użytkownika" class="form__input" />
         </div>
