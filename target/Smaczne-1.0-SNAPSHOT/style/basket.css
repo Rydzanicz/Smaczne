@@ -17,18 +17,6 @@
     max-width: 98%;
     clear: both;
 }
-.stopka {
-    position: absolute;
-    bottom: 0;
-    min-width: 98%;
-    max-width: 98%;
-    min-height: 2%;
-    text-align: right;
-    clear: both;
-}
-/*.nazwa{
-    text-align: center;
-}*/
 html {
     background-image: url("image/tlo.jpg");
     /*background-position: center;*/
@@ -43,4 +31,26 @@ html {
 }
 h1 {
     text-align: center;
+}
+#koszyk {
+    text-align: left;
+    padding: 15px;
+    font-size: 30px;
+    font-style: normal;
+}
+
+button span {
+    display: none;
+}
+
+button {
+    background-color: #b0b0b0;
+    border: solid;
+    border: black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
 }
