@@ -1,3 +1,6 @@
+<%@ page import="static jdk.nashorn.internal.objects.Global.print" %>
+<%@ page import="static jdk.nashorn.internal.objects.Global.print" %>
+<%@ page import="static jdk.nashorn.internal.objects.Global.*" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -12,9 +15,8 @@
 </div>
 
 <div class="cialo">
-
+    ${order}
 </div>
-
 <div class="stopka">
     Twórcy: Maciej Kierys, Jan Łaniocha, Michał Rydzanicz, Michał Stadnicki Grupa: 33INF-SSI-SP/C
 </div>

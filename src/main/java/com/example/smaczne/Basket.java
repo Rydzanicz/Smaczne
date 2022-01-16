@@ -1,5 +1,6 @@
 package com.example.smaczne;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -31,8 +32,11 @@ public class Basket extends HttpServlet {
         addToCart(request.getParameter("pizza"));
         addToCart(request.getParameter("minestrone"));
         addToCart(request.getParameter("lasagne"));
+        String order= getKoszyk().toString();
+        request.setAttribute("order",order);
+        RequestDispatcher rd = request.getRequestDispatcher("basket.jsp");
+        rd.forward(request,response);
 
-        out.println(getKoszyk());
     }
 
     public List getKoszyk() {

@@ -11,7 +11,7 @@
     <h1 class="nazwa">Smaczne</h1>
 </div>
 
-<div class="cialo">
+<div>
     <div class="restauracjapolska" id="restauracjapolska" onclick="location.href='restauracjaPolska.jsp';">
         <h3>Kuchnia polska</h3>
     </div>

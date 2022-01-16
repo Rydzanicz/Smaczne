@@ -16,12 +16,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>basketServlet</servlet-name>
+        <servlet-name>basket</servlet-name>
         <servlet-class>com.example.smaczne.Basket</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>basketServlet</servlet-name>
+        <servlet-name>basket</servlet-name>
         <url-pattern>/basket</url-pattern>
     </servlet-mapping>
 
