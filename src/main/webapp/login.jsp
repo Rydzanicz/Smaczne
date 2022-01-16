@@ -21,9 +21,6 @@
         </div>
     </form>
 
-    <form action="main.jsp">
-        <button type="submit">Strona Główna</button>
-    </form>
 
     <form action="register.jsp">
         <button type="submit">Rejestracja</button>
