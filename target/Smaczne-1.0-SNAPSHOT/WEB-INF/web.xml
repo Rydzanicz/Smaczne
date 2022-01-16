@@ -16,6 +16,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>basketServlet</servlet-name>
+        <servlet-class>com.example.smaczne.Basket</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>basketServlet</servlet-name>
+        <url-pattern>/basket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>com.example.smaczne.TestServlett</servlet-class>
     </servlet>

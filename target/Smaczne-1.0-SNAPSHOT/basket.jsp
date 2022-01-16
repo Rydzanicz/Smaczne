@@ -1,32 +1,23 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div class="user">
-    <header class="user__header">
-        <link rel="stylesheet" href="style/basket.css">
-        <title>Smacznego</title>
-        <h1 class="user__title">Login</h1>
-    </header>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style/maine.css">
+    <title>Smaczne</title>
+</head>
+<body>
 
-    <form class="form">
+<div class="naglowek">
+    <h1 class="nazwa">Smaczne</h1>
+</div>
 
-        <div class="form__group">
-            <input type="email" placeholder="Email" class="form__input" />
-        </div>
-
-        <div class="form__group">
-            <input type="password" placeholder="Password" class="form__input" />
-
-        </div>
-        <div>
-            <button class="btn" type="button"> Login </button>
-        </div>
-    </form>
-
-    <form action="main.jsp">
-        <button type="submit">Strona Główna</button>
-    </form>
-
-    <form action="register.jsp">
-        <button type="submit">Rejestracja</button>
-    </form>
+<div class="cialo">
 
 </div>
+
+<div class="stopka">
+    Twórcy: Maciej Kierys, Jan Łaniocha, Michał Rydzanicz, Michał Stadnicki Grupa: 33INF-SSI-SP/C
+</div>
+
+</body>
+</html>

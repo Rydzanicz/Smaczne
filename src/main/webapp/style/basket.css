@@ -44,27 +44,3 @@ html {
 h1 {
     text-align: center;
 }
-div#kebab, div#kumpir, div#balikekmek{
-    background-color: #dac1c1;
-    border-style: solid;
-    border-color: black;
-    margin: 7px;
-    padding: 50px;
-    text-align: center;
-    min-height: 30%;
-    max-height: 50%;
-    max-width: 50%;
-    min-width: 60%;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 275px;
-}
-div#kebab {
-    background-image: url("image/kuchniaturecka.jpg");
-}
-div#kumpir {
-    background-image: url("image/kumpir.jpg");
-}
-div#balikekmek{
-    background-image: url("image/Balikekmek.jpg");
-}

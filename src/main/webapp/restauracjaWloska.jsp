@@ -15,12 +15,24 @@
 <div class="cialo">
     <div class="pizza" id="pizza">
         <h3>Adana kebab</h3>
+        <form method="get" action="basket">
+            <input type="text" name="pizza" placeholder="pizza" VALUE="pizza"  class="form__input" style="display: none" />
+            <button type="submit">Dodaj</button>
+        </form>
     </div>
     <div class="minestrone" id="minestrone">
         <h3>Minestrine </h3>
+        <form method="get" action="basket">
+            <input type="text" name="minestrone" placeholder="minestrone" VALUE="minestrone"  class="form__input" style="display: none" />
+            <button type="submit">Dodaj</button>
+        </form>
     </div>
     <div class="lasagne" id="lasagne">
         <h3>Lasagne</h3>
+        <form method="get" action="basket">
+            <input type="text" name="lasagne" placeholder="lasagne" VALUE="lasagne"  class="form__input" style="display: none" />
+            <button type="submit">Dodaj</button>
+        </form>
     </div>
 
 </div>

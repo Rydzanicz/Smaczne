@@ -39,7 +39,7 @@ public class Register extends HttpServlet {
             }
             else
             {
-                out.println("Pizda Zbita");
+                out.println("Rejestracja nie udana");
             }
 
         }

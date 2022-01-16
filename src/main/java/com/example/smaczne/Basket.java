@@ -6,36 +6,45 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Basket extends HttpServlet {
-    public List basket= null;
+
+
+    private ArrayList<String> basket= new ArrayList<>();
     public Basket(){}
 
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
+        addToCart(request.getParameter("pierogi"));
+        addToCart(request.getParameter("schabowy"));
+        addToCart(request.getParameter("zurek"));
+        addToCart(request.getParameter("bigos"));
 
-        String pierogi = request.getParameter("pierogi");
-        String schabowy = request.getParameter("schabowy");
-        String zurek = request.getParameter("zurek");
+        addToCart(request.getParameter("kebab"));
+        addToCart(request.getParameter("kumpir"));
+        addToCart(request.getParameter("balikekmek"));
 
-        out.println(schabowy);
+        addToCart(request.getParameter("pizza"));
+        addToCart(request.getParameter("minestrone"));
+        addToCart(request.getParameter("lasagne"));
 
-
+        out.println(getKoszyk());
     }
 
     public List getKoszyk() {
         return basket;
     }
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        out.println("post");
-        out.print(getKoszyk());
+    public void clear() {
+        basket= new ArrayList<>();
     }
-    public void setKoszyk(String idProduktu) {
-        this.basket.add(idProduktu);
+
+    public void addToCart(String product) {
+        if (product != null) {
+            basket.add(product);
+        }
     }
 }
