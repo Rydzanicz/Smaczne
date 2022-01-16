@@ -27,6 +27,11 @@
         <button type="submit">Logowanie</button>
     </form>
 </div>
+    <p id="koszyk">Koszyk</p>
 
+    <form method="get" id="formularz">
+        ${order}
+        <button type="submit">Zamów</button>
+    </form>
 </body>
 </html>

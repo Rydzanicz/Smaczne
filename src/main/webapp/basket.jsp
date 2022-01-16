@@ -28,5 +28,14 @@
     </form>
 </div>
 
+
+</div>
+    <p id="koszyk">Koszyk</p>
+
+    <form method="get" id="formularz">
+        ${order}
+        <button type="submit">Zamów</button>
+    </form>
+
 </body>
 </html>
