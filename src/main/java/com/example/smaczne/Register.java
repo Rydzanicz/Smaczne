@@ -37,11 +37,16 @@ public class Register extends HttpServlet {
             if(i > 0) {
                 out.println("You are sucessfully registered");
             }
+            else
+            {
+                out.println("Pizda Zbita");
+            }
 
         }
         catch(Exception se) {
             se.printStackTrace();
         }
+
 
     }
 }
