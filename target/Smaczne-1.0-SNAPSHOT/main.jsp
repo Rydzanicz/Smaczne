@@ -12,9 +12,6 @@
 </div>
 
 <div>
-<form class="cialo" action="basket.jsp">>
-    <button type="submit">Koszyk</button>
-</form>
     <div class="restauracjapolska" id="restauracjapolska" onclick="location.href='restauracjaPolska.jsp';">
         <h3>Kuchnia polska</h3>
     </div>

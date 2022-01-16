@@ -15,18 +15,17 @@
 </div>
 
 <div class="cialo">
-
-    ${order}
-</div>
-<div class="stopka">
-    Twórcy: Maciej Kierys, Jan Łaniocha, Michał Rydzanicz, Michał Stadnicki Grupa: 33INF-SSI-SP/C
-
     <p id="koszyk">Koszyk</p>
 
-    <form method="get" id="formularz">
+    <form method="get" id="basket">
+        <input type="text" name="formularz" placeholder="formularz" VALUE="formularz"  class="form__input" style="display: none" />
+        ${order}
         <button type="submit">Zamów</button>
     </form>
 
+    <form action="payment.jsp">
+        <button type="submit">Logowanie</button>
+    </form>
 </div>
 
 </body>
