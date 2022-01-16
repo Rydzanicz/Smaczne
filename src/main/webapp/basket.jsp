@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style/maine.css">
+    <link rel="stylesheet" href="style/basket.css">
     <title>Smaczne</title>
 </head>
 <body>
@@ -15,10 +15,18 @@
 </div>
 
 <div class="cialo">
+
     ${order}
 </div>
 <div class="stopka">
     Twórcy: Maciej Kierys, Jan Łaniocha, Michał Rydzanicz, Michał Stadnicki Grupa: 33INF-SSI-SP/C
+
+    <p id="koszyk">Koszyk</p>
+
+    <form method="get" id="formularz">
+        <button type="submit">Zamów</button>
+    </form>
+
 </div>
 
 </body>

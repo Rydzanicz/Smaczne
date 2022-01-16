@@ -15,12 +15,10 @@
 <div class="cialo">
     <div class="pierogi" id="pierogi" name="pierogi">
         <h3>Pierogi</h3>
-
         <form method="get" action="basket">
             <input type="text" name="pierogi" placeholder="pierogi" VALUE="pierogi"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
-
     </div>
 
     <div class="schabowy" id="schabowy">
@@ -41,7 +39,6 @@
 
     <div class="zurek" id="zurek">
         <h3>Żurek</h3>
-
         <form method="get" action="basket">
             <input type="text" name="zurek" placeholder="zurek" VALUE="zurek"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
