@@ -7,7 +7,6 @@ import javax.servlet.http.*;
 import java.sql.*;
 import  javax.servlet.http.HttpServlet;
 
-@WebServlet(name = "register", value = "register")
 public class Register extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -26,7 +25,7 @@ public class Register extends HttpServlet {
 
             //creating connection with the database 
             Connection con = DriverManager.getConnection
-                    ("jdbc:mysql://localhost:3306/users","","");
+                    ("jdbc:mysql://localhost:3306/users","123","123");
 
             PreparedStatement ps = con.prepareStatement
                     ("insert into student values(?,?,?)");
