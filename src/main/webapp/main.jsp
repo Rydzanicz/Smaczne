@@ -12,17 +12,17 @@
 </div>
 
 <div class="cialo">
-    <div class="restauracjapolska" id="restauracjapolska">
-        <h3>Kuchnia polska - pierogi</h3>
+    <div class="restauracjapolska" id="restauracjapolska" onclick="location.href='restauracjaPolska.jsp';">
+        <h3>Kuchnia polska</h3>
     </div>
-    <div class="restauracjaturecka" id="restauracjaturecka">
-        <h3>Kuchnia turecka - kebab</h3>
+    <div class="restauracjaturecka" id="restauracjaturecka" onclick="location.href='restauracjaTurecka.jsp';">
+        <h3>Kuchnia turecka</h3>
     </div>
-    <div class="restauracjawloska" id="restauracjawloska">
-        <h3>Kuchnia włoska - pizza</h3>
+    <div class="restauracjawloska" id="restauracjawloska" onclick="location.href='restauracjaWloska.jsp';">
+        <h3>Kuchnia włoska</h3>
     </div>
     <div class="restauracjachinska" id="restauracjachinska">
-        <h3>Kuchnia chińska - pies z ryżem</h3>
+        <h3>Kuchnia chińska</h3>
     </div>
 </div>
 
