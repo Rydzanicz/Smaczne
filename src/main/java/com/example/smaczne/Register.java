@@ -2,7 +2,6 @@ package com.example.smaczne;
 
 import java.io.*;
 import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.sql.*;
 import  javax.servlet.http.HttpServlet;

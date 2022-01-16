@@ -6,18 +6,18 @@
         <h1 class="user__title">Login</h1>
     </header>
 
-    <form class="form">
+    <form , method="post", action="login">
 
         <div class="form__group">
-            <input type="email" placeholder="Email" class="form__input" />
+         <input type="text" placeholder="Name" name="name"/>
         </div>
 
         <div class="form__group">
-            <input type="password" placeholder="Password" class="form__input" />
+        <input type="text" placeholder="Password" name="pass"  />
 
         </div>
         <div>
-            <button class="btn" type="button"> Login </button>
+            <button type="submit"> Login </button>
         </div>
     </form>
 
