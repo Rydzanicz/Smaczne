@@ -19,9 +19,6 @@ public class Basket extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        RequestDispatcher rs = request.getRequestDispatcher("basket.jsp");
-        rs.forward(request, response);
         addToCart(request.getParameter("pierogi"));
         addToCart(request.getParameter("schabowy"));
         addToCart(request.getParameter("zurek"));
@@ -38,11 +35,6 @@ public class Basket extends HttpServlet {
         request.setAttribute("order",order);
         RequestDispatcher rd = request.getRequestDispatcher("basket.jsp");
         rd.forward(request,response);
-
-
-        out.println(getKoszyk());
-
-
 
     }
 
