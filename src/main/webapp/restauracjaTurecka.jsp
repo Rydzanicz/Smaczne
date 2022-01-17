@@ -7,29 +7,38 @@
     <title>Smaczne</title>
 </head>
 <body>
+<audio id="music">
+    <source src="style/mp3/HadalAhbek.mp3" type="audio/mpeg"></source>
+    Twoja przeglądarka nie wspiera tego formatu.
+</audio>
 
+<script>
+    var audio = document.getElementById("music");
+    audio.volume = 0.1;
+    audio.play();
+</script>
 <div class="naglowek">
     <h1 class="nazwa">Smaczne</h1>
 </div>
 
 <div class="cialo">
     <div class="kebab" id="kebab">
-        <h3>Adana kebab</h3>
         <form method="get" action="basket">
+            <label for="kebab" style="font-size: 40px;">Adana kebab</label>
             <input type="text" name="kebab" placeholder="kebab" VALUE="kebab"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
     <div class="kumpir" id="kumpir">
-        <h3>Kumpir </h3>
         <form method="get" action="basket">
+            <label for="kumpir" style="font-size: 40px;">Kumpir</label>
             <input type="text" name="kumpir" placeholder="kumpir" VALUE="kumpir"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
     <div class="balikekmek" id="balikekmek">
-        <h3>Balik ekmek</h3>
         <form method="get" action="basket">
+            <label for="balikekmek" style="font-size: 40px;">Balik ekmek</label>
             <input type="text" name="kumpir" placeholder="kumpir" VALUE="kumpir"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>

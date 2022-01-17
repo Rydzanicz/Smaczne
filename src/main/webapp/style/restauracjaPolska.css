@@ -49,8 +49,11 @@ div#pierogi, div#bigos, div#zurek, div#schabowy{
     border-style: solid;
     border-color: black;
     margin: 7px;
-    padding: 50px;
-    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 250px;
+    text-align: right;
     min-height: 30%;
     max-height: 50%;
     max-width: 50%;
@@ -83,7 +86,6 @@ button {
     border: none;
     color: white;
     padding: 15px 32px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 22px;

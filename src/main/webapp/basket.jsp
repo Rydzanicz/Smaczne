@@ -23,19 +23,8 @@
         <button type="submit">Zamów</button>
     </form>
 
-    <form action="payment.jsp">
-        <button type="submit">Logowanie</button>
-    </form>
 </div>
 
-
-</div>
-    <p id="koszyk">Koszyk</p>
-
-    <form method="get" id="formularz">
-        ${order}
-        <button type="submit">Zamów</button>
-    </form>
 
 </body>
 </html>

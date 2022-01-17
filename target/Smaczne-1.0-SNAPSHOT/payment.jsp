@@ -6,7 +6,7 @@
         <h1 class="user__title">Płatność</h1>
     </header>
 
-    <form , method="post", action="succesfull.jsp">
+    <form , method="get", action="payment">
 
         <div class="form__group">
             <input type="text" placeholder="Nr karty" name="CardNr"/>

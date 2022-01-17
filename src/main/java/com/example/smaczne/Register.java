@@ -1,10 +1,15 @@
 package com.example.smaczne;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.sql.*;
-import  javax.servlet.http.HttpServlet;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 public class Register extends HttpServlet {
 
@@ -36,6 +41,9 @@ public class Register extends HttpServlet {
 
             if(i > 0) {
                 out.println("You are sucessfully registered");
+                RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
+                rd.forward(request,response);
+
             }
             else
             {

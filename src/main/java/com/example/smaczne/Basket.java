@@ -32,13 +32,14 @@ public class Basket extends HttpServlet {
         addToCart(request.getParameter("minestrone"));
         addToCart(request.getParameter("lasagne"));
 
-        clear(request.getParameter("formularz"));
+        String  form= request.getParameter("formularz");
+        clear(form);
         String order= getKoszyk().toString();
         request.setAttribute("order",order);
         RequestDispatcher rd = request.getRequestDispatcher("basket.jsp");
+
+        if (form != null) rd = request.getRequestDispatcher("payment.jsp");
         rd.forward(request,response);
-
-
     }
 
     public List getKoszyk() {

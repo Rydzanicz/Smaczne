@@ -44,13 +44,13 @@ html {
 h1 {
     text-align: center;
 }
-div#restauracjapolska, div#restauracjaturecka, div#restauracjawloska, div#restauracjachinska{
+div#restauracjapolska, div#restauracjaturecka, div#restauracjawloska{
     background-color: #dac1c1;
     border-style: solid;
     border-color: black;
     margin: 7px;
     padding: 50px;
-    text-align: center;
+    text-align: right;
     min-height: 30%;
     max-height: 50%;
     max-width: 50%;
@@ -61,9 +61,6 @@ div#restauracjapolska, div#restauracjaturecka, div#restauracjawloska, div#restau
 }
 div#restauracjapolska {
     background-image: url("image/kuchniapolska.jpg");
-}
-div#restauracjachinska{
-    background-image: url("image/kuchniachinska.jpg");
 }
 div#restauracjaturecka{
     background-image: url("image/kuchniaturecka.jpg");

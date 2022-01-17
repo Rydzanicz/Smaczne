@@ -7,34 +7,42 @@
     <title>Smaczne</title>
 </head>
 <body>
+<audio id="music">
+    <source src="style/mp3/Toto.mp3" type="audio/mpeg"></source>
+    Twoja przeglądarka nie wspiera tego formatu.
+</audio>
 
+<script>
+    var audio = document.getElementById("music");
+    audio.volume = 0.1;
+    audio.play();
+</script>
 <div class="naglowek">
     <h1 class="nazwa">Smaczne</h1>
 </div>
 
 <div class="cialo">
     <div class="pizza" id="pizza">
-        <h3>Adana kebab</h3>
         <form method="get" action="basket">
+            <label for="pizza" style="font-size: 40px;">Pizza</label>
             <input type="text" name="pizza" placeholder="pizza" VALUE="pizza"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
     <div class="minestrone" id="minestrone">
-        <h3>Minestrine </h3>
         <form method="get" action="basket">
+            <label for="minestrone" style="font-size: 40px;">Minestrone</label>
             <input type="text" name="minestrone" placeholder="minestrone" VALUE="minestrone"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
     <div class="lasagne" id="lasagne">
-        <h3>Lasagne</h3>
         <form method="get" action="basket">
+            <label for="lasagne" style="font-size: 40px;">Lasagne</label>
             <input type="text" name="lasagne" placeholder="lasagne" VALUE="lasagne"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
-
 </div>
 
 <div class="stopka">

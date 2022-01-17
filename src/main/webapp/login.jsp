@@ -6,14 +6,14 @@
         <h1 class="user__title">Login</h1>
     </header>
 
-    <form , method="post", action="login">
+    <form method="post", action="login">
 
         <div class="form__group">
          <input type="text" placeholder="Name" name="name"/>
         </div>
 
         <div class="form__group">
-        <input type="text" placeholder="Password" name="pass"  />
+        <input type="password" placeholder="Password" name="pass"  />
 
         </div>
         <div>

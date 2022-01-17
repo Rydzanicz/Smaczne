@@ -21,9 +21,7 @@
     <div class="restauracjawloska" id="restauracjawloska" onclick="location.href='restauracjaWloska.jsp';">
         <h3>Kuchnia włoska</h3>
     </div>
-    <div class="restauracjachinska" id="restauracjachinska">
-        <h3>Kuchnia chińska</h3>
-    </div>
+
 </div>
 
 <div class="stopka">
