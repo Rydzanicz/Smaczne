@@ -29,10 +29,12 @@ public class Basket extends HttpServlet {
 
         addToCart(request.getParameter("pizza"));
         addToCart(request.getParameter("minestrone"));
-        addToCart(request.getParameter("lasagne"));// zaczytuje warości z inlutów i dodaje do listy
+        addToCart(request.getParameter("lasagne"));// zaczytuje warości z inputów i dodaje do listy
 
-        String  form= request.getParameter("formularz"); // przypisuje warotść przy naciśnięciu na przysisk 'formularz'
-        clear(form);// czyści listę przy naciśnięciu na przysisk 'formularz'
+        String  form= request.getParameter("formularz"); // przypisuje warotość przy naciśnięciu na przycisk 'Zamów'
+        String  delete= request.getParameter("basketDelete"); // przypisuje warotość przy naciśnięciu na przycisk 'Oproznij koszyk'
+        clear(form);// czyści listę przy naciśnięciu na przycisk 'Zanów'
+        clear(delete);// czyści listę przy naciśnięciu na przycisk 'Oproznij koszyk'
         String order= getKoszyk(); // wyśwetla zawartość koszyka
         request.setAttribute("order",order);
         RequestDispatcher rd = request.getRequestDispatcher("basket.jsp");// wyświetla ekran 'basket'

@@ -49,7 +49,7 @@
     <div class="zurek" id="zurek">
         <form method="get" action="basket">
             <label for="zurek" style="font-size: 40px;">Zurek</label>
-            <input type="text" name="zurek" placeholder="zurek" VALUE="zurek"  class="form__input" style="display: none" />
+            <input type="text" name="zurek" placeholder="zurek" VALUE="zurek 7zł"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>

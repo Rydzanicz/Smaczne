@@ -17,12 +17,15 @@
 <div class="cialo">
     <p id="koszyk">Koszyk</p>
 
+    </form> <form method="get" id="basketDelete">
+        <input type="text" name="basketDelete" placeholder="basketDelete" VALUE="basketDelete"  class="form__input" style="display: none" />
+        <p style="font-size: 30px;">${order}</p></br>
+    <button type="submit">Opróżnij koszyk</button>
+    </form>
     <form method="get" id="basket">
         <input type="text" name="formularz" placeholder="formularz" VALUE="formularz"  class="form__input" style="display: none" />
-        <p style="font-size: 30px;">${order}</p></br>
         <button type="submit">Zamów</button>
     </form>
-
 </div>
 
 
