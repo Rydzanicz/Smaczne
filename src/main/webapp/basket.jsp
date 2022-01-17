@@ -19,7 +19,7 @@
 
     <form method="get" id="basket">
         <input type="text" name="formularz" placeholder="formularz" VALUE="formularz"  class="form__input" style="display: none" />
-        ${order}
+        <p style="font-size: 30px;">${order}</p></br>
         <button type="submit">Zamów</button>
     </form>
 

@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Basket extends HttpServlet {
 
@@ -30,20 +29,27 @@ public class Basket extends HttpServlet {
 
         addToCart(request.getParameter("pizza"));
         addToCart(request.getParameter("minestrone"));
-        addToCart(request.getParameter("lasagne"));
+        addToCart(request.getParameter("lasagne"));// zaczytuje warości z inlutów i dodaje do listy
 
-        String  form= request.getParameter("formularz");
-        clear(form);
-        String order= getKoszyk().toString();
+        String  form= request.getParameter("formularz"); // przypisuje warotść przy naciśnięciu na przysisk 'formularz'
+        clear(form);// czyści listę przy naciśnięciu na przysisk 'formularz'
+        String order= getKoszyk(); // wyśwetla zawartość koszyka
         request.setAttribute("order",order);
-        RequestDispatcher rd = request.getRequestDispatcher("basket.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("basket.jsp");// wyświetla ekran 'basket'
 
-        if (form != null) rd = request.getRequestDispatcher("payment.jsp");
+        if (form != null) rd = request.getRequestDispatcher("payment.jsp");// przenosi na ekran 'payment' gdy zostanie naciśniety  przysisk 'formularz'
         rd.forward(request,response);
     }
 
-    public List getKoszyk() {
-        return basket;
+    public String getKoszyk() {
+        String produkty = null;
+        for (int i = 0; i< basket.size();i++)
+        {
+            if (produkty== null) produkty= basket.get(i)+"<br>";
+            else
+                produkty+= basket.get(i)+"<br>";
+        }
+        return produkty;
     }
     public void clear(String product) {
         if (product != null) {

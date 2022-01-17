@@ -9,7 +9,6 @@
 <body>
 <audio id="music">
     <source src="style/mp3/HadalAhbek.mp3" type="audio/mpeg"></source>
-    Twoja przeglądarka nie wspiera tego formatu.
 </audio>
 
 <script>
@@ -25,21 +24,21 @@
     <div class="kebab" id="kebab">
         <form method="get" action="basket">
             <label for="kebab" style="font-size: 40px;">Adana kebab</label>
-            <input type="text" name="kebab" placeholder="kebab" VALUE="kebab"  class="form__input" style="display: none" />
+            <input type="text" name="kebab" placeholder="kebab" VALUE="kebab 11zł"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
     <div class="kumpir" id="kumpir">
         <form method="get" action="basket">
             <label for="kumpir" style="font-size: 40px;">Kumpir</label>
-            <input type="text" name="kumpir" placeholder="kumpir" VALUE="kumpir"  class="form__input" style="display: none" />
+            <input type="text" name="kumpir" placeholder="kumpir" VALUE="kumpir 9zł"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
     <div class="balikekmek" id="balikekmek">
         <form method="get" action="basket">
             <label for="balikekmek" style="font-size: 40px;">Balik ekmek</label>
-            <input type="text" name="kumpir" placeholder="kumpir" VALUE="kumpir"  class="form__input" style="display: none" />
+            <input type="text" name="kumpir" placeholder="kumpir" VALUE="kumpir 12zł"  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>

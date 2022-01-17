@@ -26,9 +26,6 @@
     text-align: right;
     clear: both;
 }
-/*.nazwa{
-    text-align: center;
-}*/
 html {
     background-image: url("image/tlo.jpg");
     /*background-position: center;*/
@@ -50,7 +47,7 @@ div#restauracjapolska, div#restauracjaturecka, div#restauracjawloska{
     border-color: black;
     margin: 7px;
     padding: 50px;
-    text-align: right;
+    text-align: center;
     min-height: 30%;
     max-height: 50%;
     max-width: 50%;

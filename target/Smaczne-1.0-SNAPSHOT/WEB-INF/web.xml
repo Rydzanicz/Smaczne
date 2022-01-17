@@ -6,13 +6,13 @@
     <display-name>Smaczne</display-name>
 
     <servlet>
-        <servlet-name>registerServlet</servlet-name>
-        <servlet-class>com.example.smaczne.Register</servlet-class>
+        <servlet-name>registerServlet</servlet-name><!--    nazwa servleta-->
+        <servlet-class>com.example.smaczne.Register</servlet-class><!--    ścieżka do klasy wykorzystującą serwletu-->
     </servlet>
 
     <servlet-mapping>
         <servlet-name>registerServlet</servlet-name>
-        <url-pattern>/register</url-pattern>
+        <url-pattern>/register</url-pattern><!--    Przypisanie adresu do servletu. Wykonuje mechanizm z klasy   -->
     </servlet-mapping>
 
     <servlet>
@@ -36,15 +36,6 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>TestServlet</servlet-name>
-        <servlet-class>com.example.smaczne.TestServlett</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
-        <url-pattern>/test</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>login</servlet-name>
         <servlet-class>com.example.smaczne.Login</servlet-class>
     </servlet>
@@ -54,6 +45,6 @@
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
-    </welcome-file-list>
+    </welcome-file-list><!--   Strona startowa -->
 
 </web-app>

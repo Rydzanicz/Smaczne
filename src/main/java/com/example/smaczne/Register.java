@@ -16,45 +16,41 @@ public class Register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();//towrzenie obiektu odpowiedzialnego za wyświetlanie komunikatów na stronie
 
         String name = request.getParameter("name");
         String email = request.getParameter("email");
-        String pass = request.getParameter("pass");
+        String pass = request.getParameter("pass");// przypisuje wartości z inputów za pomocą servleta
 
         try {
 
-            // loading drivers for mysql
+            //ładowanie sterowników mysql
             Class.forName("com.mysql.jdbc.Driver");
 
-            //creating connection with the database 
+            //tworzenie połączenia z bazą
             Connection con = DriverManager.getConnection
                     ("jdbc:mysql://localhost:3306/users","123","123");
-
+            //Dodawanie użytkownika do tablicy student
             PreparedStatement ps = con.prepareStatement
                     ("insert into student values(?,?,?)");
 
             ps.setString(1, name);
             ps.setString(2, email);
             ps.setString(3, pass);
-            int i = ps.executeUpdate();
+            int i = ps.executeUpdate();//
 
             if(i > 0) {
-                out.println("You are sucessfully registered");
-                RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
+                out.println("Pomyślnie zarejestrowano");// komunikat na stronie
+                RequestDispatcher rd = request.getRequestDispatcher("main.jsp"); // włącza stronę główną
                 rd.forward(request,response);
-
             }
             else
             {
                 out.println("Rejestracja nie udana");
             }
-
         }
         catch(Exception se) {
             se.printStackTrace();
         }
-
-
     }
 }

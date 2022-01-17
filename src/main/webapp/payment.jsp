@@ -16,7 +16,7 @@
             <input type="text" placeholder="CVC" name="CVC"  />
         </div>
         <div class="form__group">
-            <input type="text" placeholder="Data" name="Data"  />
+            <input type="date" placeholder="Data" name="Data"  />
         </div>
         <div>
             <button type="submit"> Zapłać </button>
