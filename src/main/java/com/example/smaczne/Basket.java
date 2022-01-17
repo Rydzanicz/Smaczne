@@ -18,28 +18,31 @@ public class Basket extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        addToCart(request.getParameter("pierogi"));
-        addToCart(request.getParameter("schabowy"));
-        addToCart(request.getParameter("zurek"));
-        addToCart(request.getParameter("bigos"));
+        addToCart("Pierogi", request.getParameter("pierogi"));
+        addToCart("Schabowy", request.getParameter("schabowy"));
+        addToCart("Zurek", request.getParameter("zurek"));
+        addToCart("Bigos", request.getParameter("bigos"));
 
-        addToCart(request.getParameter("kebab"));
-        addToCart(request.getParameter("kumpir"));
-        addToCart(request.getParameter("balikekmek"));
+        addToCart("Adama kebab", request.getParameter("kebab"));
+        addToCart("Kumpir", request.getParameter("kumpir"));
+        addToCart("Balik ekmek", request.getParameter("balikekmek"));
 
-        addToCart(request.getParameter("pizza"));
-        addToCart(request.getParameter("minestrone"));
-        addToCart(request.getParameter("lasagne"));// zaczytuje warości z inputów i dodaje do listy
+        addToCart("Pizza", request.getParameter("pizza"));
+        addToCart("Minestrone", request.getParameter("minestrone"));
+        addToCart("Lasagne", request.getParameter("lasagne"));// zaczytuje warości z inputów i dodaje do listy
 
         String  form= request.getParameter("formularz"); // przypisuje warotość przy naciśnięciu na przycisk 'Zamów'
         String  delete= request.getParameter("basketDelete"); // przypisuje warotość przy naciśnięciu na przycisk 'Oproznij koszyk'
-        clear(form);// czyści listę przy naciśnięciu na przycisk 'Zanów'
+
         clear(delete);// czyści listę przy naciśnięciu na przycisk 'Oproznij koszyk'
         String order= getKoszyk(); // wyśwetla zawartość koszyka
         request.setAttribute("order",order);
         RequestDispatcher rd = request.getRequestDispatcher("basket.jsp");// wyświetla ekran 'basket'
 
-        if (form != null) rd = request.getRequestDispatcher("payment.jsp");// przenosi na ekran 'payment' gdy zostanie naciśniety  przysisk 'formularz'
+        if (form != null&& !basket.isEmpty()){// gdy koszyk nie jest pusty i zostanie naciśniety przycisk zamów
+            rd = request.getRequestDispatcher("payment.jsp");// przenosi na ekran 'payment' gdy zostanie naciśniety  przysisk 'formularz'
+            clear(form);// czyści listę przy naciśnięciu na przycisk 'Zanów'
+        }
         rd.forward(request,response);
     }
 
@@ -59,9 +62,9 @@ public class Basket extends HttpServlet {
         }
     }
 
-    public void addToCart(String product) {
+    public void addToCart(String name, String product) {
         if (product != null) {
-            basket.add(product);
+            basket.add(name+" "+product+"zł");
         }
     }
 }

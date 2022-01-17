@@ -25,7 +25,7 @@
     <div class="pierogi" id="pierogi" name="pierogi">
         <form method="get" action="basket">
             <label for="pierogi" style="font-size: 40px;">Pierogi</label>
-            <input type="text" name="pierogi" placeholder="pierogi" VALUE="pierogi 15 zł"  class="form__input" style="display: none" />
+            <input type="text" name="pierogi" placeholder="pierogi" VALUE=15  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
@@ -33,7 +33,7 @@
     <div class="schabowy" id="schabowy">
         <form method="get" action="basket">
             <label for="schabowy" style="font-size: 40px;">Schabowy</label>
-            <input type="text" name="schabowy" placeholder="Schabowy" VALUE="schabowy 17 zł"  class="form__input" style="display: none" />
+            <input type="text" name="schabowy" placeholder="Schabowy" VALUE=17 class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
@@ -41,7 +41,7 @@
     <div class="bigos" id="bigos">
         <form method="get" action="basket">
             <label for="bigos" style="font-size: 40px;">Bigos</label>
-            <input type="text" name="bigos" placeholder="bigos" VALUE="bigos 13zł"  class="form__input" style="display: none" />
+            <input type="text" name="bigos" placeholder="bigos" VALUE=13  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
@@ -49,7 +49,7 @@
     <div class="zurek" id="zurek">
         <form method="get" action="basket">
             <label for="zurek" style="font-size: 40px;">Zurek</label>
-            <input type="text" name="zurek" placeholder="zurek" VALUE="zurek 7zł"  class="form__input" style="display: none" />
+            <input type="text" name="zurek" placeholder="zurek" VALUE=7  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>

@@ -24,21 +24,21 @@
     <div class="pizza" id="pizza">
         <form method="get" action="basket">
             <label for="pizza" style="font-size: 40px;">Pizza</label>
-            <input type="text" name="pizza" placeholder="pizza" VALUE="pizza 20zł"  class="form__input" style="display: none" />
+            <input type="text" name="pizza" placeholder="pizza" VALUE=20  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
     <div class="minestrone" id="minestrone">
         <form method="get" action="basket">
             <label for="minestrone" style="font-size: 40px;">Minestrone</label>
-            <input type="text" name="minestrone" placeholder="minestrone" VALUE="minestrone 11zł"  class="form__input" style="display: none" />
+            <input type="text" name="minestrone" placeholder="minestrone" VALUE=11  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
     <div class="lasagne" id="lasagne">
         <form method="get" action="basket">
             <label for="lasagne" style="font-size: 40px;">Lasagne</label>
-            <input type="text" name="lasagne" placeholder="lasagne" VALUE="lasagne 19zł"  class="form__input" style="display: none" />
+            <input type="text" name="lasagne" placeholder="lasagne" VALUE=19  class="form__input" style="display: none" />
             <button type="submit">Dodaj</button>
         </form>
     </div>
