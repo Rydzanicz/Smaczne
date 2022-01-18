@@ -22,35 +22,46 @@ public class Register extends HttpServlet {
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");// przypisuje wartości z inputów za pomocą servleta
 
-        try {
+        if (name.isEmpty()||email.isEmpty()||pass.isEmpty()) {
+            RequestDispatcher rd = request.getRequestDispatcher("register.jsp");
+            rd.forward(request, response);
+        }
 
-            //ładowanie sterowników mysql
-            Class.forName("com.mysql.jdbc.Driver");
+        else {
+            try {
 
-            //tworzenie połączenia z bazą
-            Connection con = DriverManager.getConnection
-                    ("jdbc:mysql://localhost:3306/users","123","123");
-            //Dodawanie użytkownika do tablicy student
-            PreparedStatement ps = con.prepareStatement
-                    ("insert into student values(?,?,?)");
+                //ładowanie sterowników mysql
+                Class.forName("com.mysql.jdbc.Driver");
 
-            ps.setString(1, name);
-            ps.setString(2, email);
-            ps.setString(3, pass);
-            int i = ps.executeUpdate();//
+                //tworzenie połączenia z bazą
+                Connection con = DriverManager.getConnection
+                        ("jdbc:mysql://localhost:3306/users","123","123");
+                //Dodawanie użytkownika do tablicy student
+                PreparedStatement ps = con.prepareStatement
+                        ("insert into student values(?,?,?,?)");
 
-            if(i > 0) {
-                out.println("Pomyślnie zarejestrowano");// komunikat na stronie
-                RequestDispatcher rd = request.getRequestDispatcher("main.jsp"); // włącza stronę główną
-                rd.forward(request,response);
+                ps.setString(1, name);
+                ps.setString(2, email);
+                ps.setString(3, pass);
+                ps.setString(4, "user");
+                int i = ps.executeUpdate();//
+
+                if(i > 0) {
+                    out.println("Pomyślnie zarejestrowano");// komunikat na stronie
+                    RequestDispatcher rd = request.getRequestDispatcher("login.jsp"); // włącza stronę główną
+                    rd.forward(request,response);
+                }
+                else
+                {
+                    out.println("Rejestracja nie udana");
+                    RequestDispatcher rd = request.getRequestDispatcher("register.jsp");
+                    rd.forward(request, response);
+                }
             }
-            else
-            {
-                out.println("Rejestracja nie udana");
+            catch(Exception se) {
+                se.printStackTrace();
             }
         }
-        catch(Exception se) {
-            se.printStackTrace();
-        }
+
     }
 }
