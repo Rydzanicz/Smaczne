@@ -28,6 +28,8 @@ public class Register extends HttpServlet {
         }
 
         else {
+            EmailUtil eMail = new EmailUtil();
+            eMail.sendActivationEmail();
             try {
 
                 //ładowanie sterowników mysql
