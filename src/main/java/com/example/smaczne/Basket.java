@@ -7,13 +7,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Basket extends HttpServlet {
 
 
-    private ArrayList<String> basket= new ArrayList<>();
-    public Basket(){}
-
+    List<InBasket> basket =  new ArrayList<>();
+    List<InBasket> basket2 =  new ArrayList<>();
+    String produkty;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -47,24 +48,26 @@ public class Basket extends HttpServlet {
     }
 
     public String getKoszyk() {
-        String produkty = null;
+
         for (int i = 0; i< basket.size();i++)
         {
-            if (produkty== null) produkty= basket.get(i)+"<br>";
+            if(i ==0 ) produkty= basket.get(i).toString()+"<br>";
             else
-                produkty+= basket.get(i)+"<br>";
+                produkty+= basket.get(i).toString()+"<br>";// tworzy string z zamówieniami
         }
         return produkty;
     }
     public void clear(String product) {
-        if (product != null) {
-            basket= new ArrayList<>();
+        if (product != null) { // czyści listę produktów
+            basket = new ArrayList<>();
         }
     }
 
     public void addToCart(String name, String product) {
-        if (product != null) {
-            basket.add(name+" "+product+"zł");
+        if (product != null)
+        {
+            InBasket inBasket= new InBasket(name, Integer.valueOf(product));// tworzy obiekt zamówienia
+            basket.add(inBasket);// dodaje obiekt do koszyka
         }
     }
 }

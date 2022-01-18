@@ -16,13 +16,13 @@ public class Register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();//towrzenie obiektu odpowiedzialnego za wyświetlanie komunikatów na stronie
+        PrintWriter out = response.getWriter();//tworzenie obiektu odpowiedzialnego za wyświetlanie komunikatów na stronie
 
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");// przypisuje wartości z inputów za pomocą servleta
 
-        if (name.isEmpty()||email.isEmpty()||pass.isEmpty()) {
+        if (name.isEmpty()||email.isEmpty()||pass.isEmpty()|| pass.length()<8) {
             RequestDispatcher rd = request.getRequestDispatcher("register.jsp");
             rd.forward(request, response);
         }
@@ -44,7 +44,7 @@ public class Register extends HttpServlet {
                 ps.setString(2, email);
                 ps.setString(3, pass);
                 ps.setString(4, "user");
-                int i = ps.executeUpdate();//
+                int i = ps.executeUpdate(); //wywołanie polecenie sql
 
                 if(i > 0) {
                     out.println("Pomyślnie zarejestrowano");// komunikat na stronie
