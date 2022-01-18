@@ -13,8 +13,7 @@ public class Basket extends HttpServlet {
 
 
     List<InBasket> basket =  new ArrayList<>();
-    List<InBasket> basket2 =  new ArrayList<>();
-    String produkty;
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -48,7 +47,7 @@ public class Basket extends HttpServlet {
     }
 
     public String getKoszyk() {
-
+        String produkty = null;
         for (int i = 0; i< basket.size();i++)
         {
             if(i ==0 ) produkty= basket.get(i).toString()+"<br>";
